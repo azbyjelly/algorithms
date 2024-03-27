@@ -7,8 +7,6 @@ chances = 7
 ganhou = False
 
 while True:
-    # criar a nossa logica
-
     for letra in palavra:
 
         if letra.lower() in letras_usuario:
@@ -35,7 +33,7 @@ while True:
                     ganhou = False
 
             if chances == 0 or ganhou:
-                break
+                print("jogo encerrado")
 
     if ganhou:
 
