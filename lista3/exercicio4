@@ -1,0 +1,19 @@
+salarios = []
+num_filhos = []
+salario = float(input("digite o salario: "))
+
+while salario >= 0:
+    num_filho = int(input("digite o numero de filhos: "))
+    salarios.append(salario)
+    num_filhos.append(num_filho)
+    salario = float(input("digite o salario: "))
+
+media_salario = sum(salarios) / len(salarios)
+media_filhos = sum(num_filho) / len(num_filho)
+maior_salario = max(salarios)
+percentual_ate_1000 = (sum(sal <= 1000 for sal in salarios) / len(salarios)) * 100
+
+print(f"a media do salario da população é: {media_salario:.2f}%")
+print(f"a media do numero de filhos é: {media_filhos:.2f}")
+print(f"o maior salário é: {maior_salario:.2f}")
+print(f"o percentual de pessoas com salario ate R$1000,00 é: {percentual_ate_1000:.2f}%")
