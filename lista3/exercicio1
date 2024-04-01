@@ -1,0 +1,12 @@
+for i in range(10):
+    numero = int(input("digite um numero: "))
+    if i == 0:
+        menor = numero
+        maior = numero
+    if numero < menor:
+        menor = numero
+    if numero > maior:
+        maior = numero
+
+print(f"menor = {menor}")
+print(f"maior = {maior}")
