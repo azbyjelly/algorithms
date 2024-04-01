@@ -1,0 +1,6 @@
+import math
+n = int(input("digite a quantidade de valores a serem lidos: "))
+for _ in range(n):
+    valor = int(input("digite um numero: "))
+    fatorial = math.factorial(valor)
+    print(f"0 fatorial de {valor} é: {fatorial}")
