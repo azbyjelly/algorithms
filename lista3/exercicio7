@@ -1,0 +1,33 @@
+votos_candidato = [0, 0, 0, 0]
+votos_nulos = 0
+votos_brancos = 0
+voto = int(input("digite o codigo do candidato (1, 2, 3, 4, 5 ou 6): "))
+while voto != 0:
+    if voto == 1:
+        votos_candidato[0] += 1
+    else:
+        if voto == 2:
+            votos_candidato[1] += 1
+        else:
+            if voto == 3:
+                votos_candidato[2] += 1
+            else:
+                if voto == 4:
+                    votos_candidato[3] += 1
+                else:
+                    if voto == 5:
+                        votos_nulos += 1
+                    else:
+                        if voto == 6:
+                            votos_brancos +=1
+                        else:
+                            print("codigo de voto invalido")
+
+    voto = int(input("digite o codigo do candidato (1, 2, 3, 4, 5 ou 6): "))
+
+print(f"Total de votos para o candidato 1: {votos_candidato[0]}")
+print(f"Total de votos para o candidato 2: {votos_candidato[1]}")
+print(f"Total de votos para o candidato 3: {votos_candidato[2]}")
+print(f"Total de votos para o candidato 4: {votos_candidato[3]}")
+print(f"Total de votos nulos: {votos_nulos}")
+print(f"Total de votos em branco: {votos_brancos}")
