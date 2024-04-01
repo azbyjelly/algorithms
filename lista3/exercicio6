@@ -1,0 +1,14 @@
+soma = 0
+count = 0
+numero = int(input("digite um numero: "))
+
+while numero >= 0:
+    soma += numero
+    count += 1
+    numero = int(input("digite um numero: "))
+
+if count > 0:
+    media = soma / count
+    print(f"a media dos numeros é: {media:.2f}")
+else:
+    print("nenhum numero valido foi inserido")
