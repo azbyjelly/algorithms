@@ -1,0 +1,26 @@
+contador = 0
+soma = 0
+contador_negativos = 0
+contador_positivos = 0
+
+while True:
+    valor = float(input("Digite um valor (digite 0 para encerrar): "))
+    
+    contador += 1
+    soma += valor
+    
+    if valor < 0:
+        contador_negativos += 1
+    else:
+        contador_positivos += 1
+
+media = soma / contador
+
+percentual_positivos = (contador_positivos / contador) * 100
+percentual_negativos = (contador_negativos / contador) * 100
+
+print("Média aritmética dos valores lidos:", media)
+print("Quantidade de valores positivos:", contador_positivos)
+print("Quantidade de valores negativos:", contador_negativos)
+print("Percentual de valores positivos:", percentual_positivos)
+print("Percentual de valores negativos:", percentual_negativos)
