@@ -1,0 +1,26 @@
+count = 0
+soma_precos = 0
+soma_precos_novos = 0
+
+codigo = int(input("Digite o código do produto (negativo para sair): "))
+
+while codigo >= 0:
+    preco_custo = float(input("Digite o preço de custo do produto: "))
+
+    preco_novo = preco_custo * 1.2
+
+    count += 1
+    soma_precos += preco_custo
+    soma_precos_novos += preco_novo
+
+    print("Código do produto:", codigo)
+    print("Preço antigo:", preco_custo)
+    print("Preço novo:", preco_novo)
+
+    codigo = int(input("Digite o código do produto (negativo para sair): "))
+
+media_precos = soma_precos / count if count > 0 else 0
+media_precos_novos = soma_precos_novos / count if count > 0 else 0
+
+print("Média dos preços sem aumento:", media_precos)
+print("Média dos preços com aumento:", media_precos_novos)
