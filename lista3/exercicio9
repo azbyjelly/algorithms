@@ -1,5 +1,8 @@
 n1 = int(input("digite o primeiro valor: "))
 n2 = int(input("digite o segundo valor: "))
+if n2 < n1:
+	aux = n1
+	n1 = n2
+	n2 = aux
 for i in range(n1, n2+1):
-    resultado = i * n2
-    print(f"{i} x {n2} = {resultado}")
+	  print(i)
