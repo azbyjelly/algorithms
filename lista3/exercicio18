@@ -1,0 +1,28 @@
+def is_perfect_number(num):
+    # Inicializar a variável de soma dos divisores
+    soma_divisores = 0
+
+    # Loop para verificar os divisores do número
+    for i in range(1, num):
+        if num % i == 0:
+            soma_divisores += i
+
+    # Verificar se o número é perfeito
+    if soma_divisores == num:
+        return True
+    else:
+        return False
+
+
+# Inicializar a variável de contagem de números perfeitos
+count = 0
+
+# Inicializar a variável de número a ser verificado
+num = 1
+
+# Loop para encontrar os 3 primeiros números perfeitos
+while count < 3:
+    if is_perfect_number(num):
+        count += 1
+        print("Número perfeito:", num)
+    num += 1
