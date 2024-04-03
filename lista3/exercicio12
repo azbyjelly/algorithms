@@ -1,0 +1,23 @@
+count_0_25 = 0
+count_26_50 = 0
+count_51_75 = 0
+count_76_100 = 0
+
+num = int(input("Digite um número (negativo para sair): "))
+
+while num >= 0:
+    if 0 <= num <= 25:
+        count_0_25 += 1
+    elif 26 <= num <= 50:
+        count_26_50 += 1
+    elif 51 <= num <= 75:
+        count_51_75 += 1
+    elif 76 <= num <= 100:
+        count_76_100 += 1
+
+    num = int(input("Digite um número (negativo para sair): "))
+
+print("Quantidade de números no intervalo [0, 25]:", count_0_25)
+print("Quantidade de números no intervalo [26, 50]:", count_26_50)
+print("Quantidade de números no intervalo [51, 75]:", count_51_75)
+print("Quantidade de números no intervalo [76, 100]:", count_76_100)
