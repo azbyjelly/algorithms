@@ -6,7 +6,7 @@ arq.close()
 palavra_secreta = random.choice(linhas).strip().upper()
 
 letras_digitadas = []
-chances = 7
+chances = 6
 ganhou = False
 
 while chances > 0 and not ganhou:
