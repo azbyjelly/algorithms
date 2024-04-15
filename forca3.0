@@ -9,34 +9,37 @@ chances = 6
 ganhou = False
 jogadas = ''
 
-#print(palavra_secreta)
+
 
 for i in range(len(palavra_secreta)):
     palavra_oculta += '_'
 while chances > 0 and not ganhou:
     print(f"{palavra_oculta} Você tem {chances} chances")
     letra = input('escolha uma letra: ').upper()
-    while letra in jogadas or len(letra) > 1:
-        letra = input('escolha uma letra: ').upper()
-    aux = ''
-    jogadas += letra
-    acerto = False
-    for i in range(len(palavra_secreta)):
-        if palavra_oculta[i] != '_':
-            aux += palavra_oculta[i]
-        else:
-            if palavra_secreta[i] == letra:
-                aux += letra
-                if not acerto:
-                    acerto = True
-            else:
-                aux += '_'
-    palavra_oculta = aux
-    if not acerto:
-        chances -= 1
+    if letra in jogadas:
+        print("essa letra ja foi digitada, tente outra")
     else:
-        if palavra_secreta == palavra_oculta:
-            ganhou = True
+        while letra in jogadas or len(letra) > 1:
+            letra = input('escolha uma letra: ').upper()
+        aux = ''
+        jogadas += letra
+        acerto = False
+        for i in range(len(palavra_secreta)):
+            if palavra_oculta[i] != '_':
+                aux += palavra_oculta[i]
+            else:
+                if palavra_secreta[i] == letra:
+                    aux += letra
+                    if not acerto:
+                        acerto = True
+                else:
+                    aux += '_'
+        palavra_oculta = aux
+        if not acerto:
+            chances -= 1
+        else:
+            if palavra_secreta == palavra_oculta:
+                ganhou = True
 if ganhou:
     print(f"Você ganhou, a palavra era {palavra_secreta}")
 else:
