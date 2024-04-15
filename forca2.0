@@ -1,0 +1,38 @@
+import random
+
+arq = open("palavras-boas.txt")
+linhas = arq.readlines()
+arq.close()
+palavra_secreta = random.choice(linhas).strip().upper()
+
+letras_digitadas = []
+chances = 7
+ganhou = False
+
+while chances > 0 and not ganhou:
+    palavra_oculta = ""
+    for letra in palavra_secreta:
+        if letra in letras_digitadas:
+            palavra_oculta += letra
+        else:
+            palavra_oculta += "_"
+    print("Palavra: " + palavra_oculta)
+
+    letra = input("Digite uma letra: ")
+
+    if letra in letras_digitadas:
+        print("Você já tentou essa letra!")
+    else:
+        letras_digitadas.append(letra)
+        if letra in palavra_secreta:
+            print("Você acertou uma letra!")
+        else:
+            print("Essa letra não está na palavra.")
+            chances -= 1
+
+    if all(letra in letras_digitadas for letra in palavra_secreta):
+        ganhou = True
+        print("Parabéns, você ganhou!")
+
+    elif chances == 0:
+        print("Suas chances acabaram. A palavra era: " + palavra_secreta)
