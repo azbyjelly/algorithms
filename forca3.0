@@ -7,15 +7,19 @@ palavra_secreta = random.choice(linhas).upper().strip()
 palavra_oculta = ""
 chances = 6
 ganhou = False
-print(palavra_secreta)
+jogadas = ''
+
+#print(palavra_secreta)
+
 for i in range(len(palavra_secreta)):
     palavra_oculta += '_'
 while chances > 0 and not ganhou:
     print(f"{palavra_oculta} Você tem {chances} chances")
-    letra = input('letra: ').upper()
-    while letra in palavra_oculta or len(letra) > 1:
-        letra = input('letra: ').upper()
+    letra = input('escolha uma letra: ').upper()
+    while letra in jogadas or len(letra) > 1:
+        letra = input('escolha uma letra: ').upper()
     aux = ''
+    jogadas += letra
     acerto = False
     for i in range(len(palavra_secreta)):
         if palavra_oculta[i] != '_':
