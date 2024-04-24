@@ -1,6 +1,3 @@
-# 5.	Escrever uma função que recebe por parâmetro um vetor
-# de inteiros e retorna a soma de seus elementos.
-
 def digitar_elementos_vetor(num_vezes):
     vetor = []
     for i in range(num_vezes):
