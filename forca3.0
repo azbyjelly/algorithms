@@ -1,3 +1,5 @@
+grupo: Israel Gonçalves, Lavínia Butinholi, Pedro Gomes
+
 import random
 
 arq = open("palavras-boas.txt")
