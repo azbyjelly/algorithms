@@ -1,0 +1,7 @@
+vetor = [-9, -5, 3, 8, 9, -15, 16, -4, 2]
+numero = int(input("digite um numero: "))
+for i in range(len(vetor)):
+    if numero in vetor:
+        print("o número que você digitou está dentro do vetor", vetor)
+    else:
+        print("o número que você digitou não está dentro do vetor", vetor)
