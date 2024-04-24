@@ -1,0 +1,4 @@
+string = "macaco pelado"
+numero = 6
+resultado = string[:numero]
+print("os primeiros caracteres da string são: ", resultado)
