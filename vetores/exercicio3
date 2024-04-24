@@ -1,0 +1,7 @@
+vetor = [1, 5, 7, 2, 4, 6, 3, 8, 10]
+menor = vetor [0]
+for valor in vetor:
+    if valor < menor:
+        menor = valor
+
+print("Menor valor: ", menor)
