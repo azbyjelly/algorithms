@@ -1,0 +1,7 @@
+vetor = [1, 5, 7, 2, 4, 6, 3, 8, 10]
+for _ in range(len(vetor)):
+    soma = 0
+    for valor in vetor:
+        soma += valor
+
+print("A soma dos elementos do vetor é:", soma)
