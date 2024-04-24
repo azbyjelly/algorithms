@@ -1,0 +1,8 @@
+vetor = [-9, -5, 3, 8, 9, -15, 16, -4, 2]
+for i in range(len(vetor)):
+    for j in range(len(vetor)):
+        if vetor[i] < vetor[j]:
+            aux = vetor[i]
+            vetor[i] = vetor[j]
+            vetor[j] = aux
+print(vetor)
