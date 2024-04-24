@@ -1,0 +1,6 @@
+vetor = [9, 5, 3, 8, 15, 16, 4, 2]
+soma = 0
+for valor in vetor:
+    soma += valor
+media = soma / len(vetor)
+print("a média dos valores no vetor é: ", media)
