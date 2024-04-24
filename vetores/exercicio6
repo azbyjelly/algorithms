@@ -1,4 +1,6 @@
-string = "macaco pelado"
-numero = 6
-resultado = string[:numero]
-print("os primeiros caracteres da string são: ", resultado)
+def retornar_primeiros_caracteres(string, numero):
+    return string[:numero]
+texto = "macaco pelado"
+num_caracteres = 8
+resultado = retornar_primeiros_caracteres(texto, num_caracteres)
+print("os primeiros caracteres são: ", resultado)
