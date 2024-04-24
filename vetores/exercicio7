@@ -1,0 +1,4 @@
+string = "macaco pelado"
+caractere = 'e'
+resultado = string.split(caractere)[0]
+print("os primeiros caracteres da string são: ", resultado)
