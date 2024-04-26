@@ -5,3 +5,25 @@ for valor in vetor:
         menor = valor
 
 print("Menor valor: ", menor)
+
+#com def 
+
+def receber_valores(qtd_vezes):
+    vetor = []
+    for j in range(qtd_vezes):
+        valor = int(input("digite um valor: "))
+        vetor.append(valor)
+    return vetor
+
+
+def encontrar_maior():
+    menor = vetor[0]
+    for i in range(len(vetor)):
+        if vetor[i] < menor:
+            menor = vetor[i]
+    return menor
+
+qtd_vezes = int(input("digite quantas vezes: "))
+vetor = receber_valores(qtd_vezes)
+menor = encontrar_maior()
+print(menor)
