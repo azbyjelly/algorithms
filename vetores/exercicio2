@@ -7,15 +7,24 @@ for valor in vetor:
 print("Maior valor: ", maior)
 
 
-def encontrar_maior_elemento(vetor):
-    maior = vetor[0]  # Assume o primeiro elemento como o maior
-    for elemento in vetor:
-        if elemento > maior:
-            maior = elemento
+#com def
+
+def receber_valores(qtd_vezes):
+    vetor = []
+    for j in range(qtd_vezes):
+        valor = int(input("digite um valor: "))
+        vetor.append(valor)
+    return vetor
+
+
+def encontrar_maior():
+    maior = vetor[0]
+    for i in range(len(vetor)):
+        if vetor[i] > maior:
+            maior = vetor[i]
     return maior
 
-# Exemplo de uso
-vetor_exemplo = [4, 7, 2, 9, 5, 1]
-maior_elemento = encontrar_maior_elemento(vetor_exemplo)
-print("O maior elemento do vetor é:", maior_elemento)
-
+qtd_vezes = int(input("digite quantas vezes: "))
+vetor = receber_valores(qtd_vezes)
+maior = encontrar_maior()
+print(maior)
