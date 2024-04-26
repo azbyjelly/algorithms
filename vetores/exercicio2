@@ -5,3 +5,17 @@ for valor in vetor:
         maior = valor
 
 print("Maior valor: ", maior)
+
+
+def encontrar_maior_elemento(vetor):
+    maior = vetor[0]  # Assume o primeiro elemento como o maior
+    for elemento in vetor:
+        if elemento > maior:
+            maior = elemento
+    return maior
+
+# Exemplo de uso
+vetor_exemplo = [4, 7, 2, 9, 5, 1]
+maior_elemento = encontrar_maior_elemento(vetor_exemplo)
+print("O maior elemento do vetor é:", maior_elemento)
+
