@@ -6,3 +6,27 @@ for i in range(len(vetor)):
             vetor[i] = vetor[j]
             vetor[j] = aux
 print(vetor)
+
+#com def
+
+def receber_valores(qtd_vezes):
+    vetor = []
+    for j in range(qtd_vezes):
+        valor = int(input("digite um valor: "))
+        vetor.append(valor)
+    return vetor
+qtd_vezes = int(input("quantas vezes: "))
+vetor = receber_valores(qtd_vezes)
+
+
+def ordenar_valores():
+    for a in range(len(vetor)):
+        for i in range(len(vetor)):
+            if vetor[a] < vetor[i]:
+                aux = vetor[a]
+                vetor[a] = vetor[i]
+                vetor[i] = aux
+    return vetor
+
+vetor = ordenar_valores()
+print(vetor)
