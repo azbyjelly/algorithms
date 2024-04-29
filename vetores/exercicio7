@@ -12,3 +12,5 @@ def caracteres_ate_caractere(string, caractere):
         resultado += string[index]
         index += 1
     return resultado
+
+print(caracteres_ate_caractere("macaco pelado", "p"))
