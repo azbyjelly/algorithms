@@ -9,7 +9,12 @@ for i in range(len(vetor)):
 #com def 
 
 def verifica_pertinencia(valor, vetor):
-    if valor in vetor:
-        return True
-    else:
-        return False
+		achou = False
+		for i in range(len(vetor)):
+	    if vetor[i] == valor:
+				achou = True
+      return achou
+
+vetor = [-9, -5, 3, 8, 9, -15, 16, -4, 2]
+valor = 3
+print(verifica_permanencia(valor, vetor))
