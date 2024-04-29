@@ -8,3 +8,11 @@ while i < len(vetor):
 print(vetor)
 
 #while faz tudo que o for i in range faz, mas o for não faz tudo que o while faz
+
+#com def
+
+def substituir_negativos_por_zero(vetor):
+    for i in range(len(vetor)):
+        if vetor[i] < 0:
+            vetor[i] = 0
+    return vetor
