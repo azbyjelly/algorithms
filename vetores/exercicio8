@@ -5,3 +5,11 @@ for i in range(len(vetor)):
         print("o número que você digitou está dentro do vetor", vetor)
     else:
         print("o número que você digitou não está dentro do vetor", vetor)
+
+#com def 
+
+def verifica_pertinencia(valor, vetor):
+    if valor in vetor:
+        return True
+    else:
+        return False
