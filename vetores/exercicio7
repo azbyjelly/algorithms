@@ -2,3 +2,13 @@ string = "macaco pelado"
 caractere = 'e'
 resultado = string.split(caractere)[0]
 print("os primeiros caracteres da string são: ", resultado)
+
+#com def
+
+def caracteres_ate_caractere(string, caractere):
+    resultado = ""
+    index = 0
+    while index < len(string) and string[index] != caractere:
+        resultado += string[index]
+        index += 1
+    return resultado
