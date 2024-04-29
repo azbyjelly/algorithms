@@ -4,3 +4,11 @@ for valor in vetor:
     soma += valor
 media = soma / len(vetor)
 print("a média dos valores no vetor é: ", media)
+
+#com def 
+
+def media_vetor(vetor):
+    total = 0
+    for num in vetor:
+        total += num
+    return total / len(vetor) if len(vetor) > 0 else 0
