@@ -1,6 +1,10 @@
 def retornar_primeiros_caracteres(string, numero):
-    return string[:numero]
-texto = "macaco pelado"
-num_caracteres = 8
-resultado = retornar_primeiros_caracteres(texto, num_caracteres)
-print("os primeiros caracteres são: ", resultado)
+    if numero > len(string):
+			numero = len(string) 
+		for i in range(numero):
+				print(string[i], end="")
+
+string = int(input("digite uma string"))
+numero = int(input("digite um numero"))
+retornar_primeiros_caracteres(string, numero)
+
