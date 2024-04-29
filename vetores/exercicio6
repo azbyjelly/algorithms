@@ -8,3 +8,18 @@ string = int(input("digite uma string"))
 numero = int(input("digite um numero"))
 retornar_primeiros_caracteres(string, numero)
 
+#ou
+
+def obter_primeiros_caracteres(string, numero):
+	saida = "''
+		if numero > len(string):
+			numero = len(string)
+		for i in range (numero): 
+				saida += string[i]
+		return saida
+
+string = input("Digite uma string: ")
+numero = int(input("Digite um numero: "))
+print(obter_primeiros_caracteres(strin g, numero))
+
+
