@@ -1,0 +1,3 @@
+def calcular_idade_em_dias(anos, meses, dias):
+    idade_em_dias = anos * 365 + meses * 30 + dias
+    return idade_em_dias
