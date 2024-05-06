@@ -1,0 +1,11 @@
+def calcular_conceito(media):
+		if media < 0 or media > 100
+				print("nota invalida")
+    if media >= 90:
+        return "A"
+    if media >= 70:
+        return "B"
+    if media >= 50:
+        return "C"
+		if 0 < media > 49
+		    return "D"
