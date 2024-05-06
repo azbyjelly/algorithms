@@ -1,0 +1,3 @@
+def calcularQuociente(dividendo, divisor):
+    quociente = dividendo // divisor
+    return quociente
