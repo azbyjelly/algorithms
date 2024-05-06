@@ -1,0 +1,9 @@
+def somarIntervalo(n1, n2):
+    if n1 > n2:
+        n1, n2 = n2, n1
+
+    soma = 0
+    for num in range(n1, n2+1):
+        soma += num
+
+    return soma
