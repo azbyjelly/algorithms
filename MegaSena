@@ -1,69 +1,51 @@
-#Lavínia Butinholi Basílio e Israel Gonçalves de oliveira
 
-import random
 from random import randint
 
-vetor_pc = []
-vetor = [6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
-aposta = 0
-valor_da_aposta = int(imput("digite a quantidade de apostas (6 a 20): "))
-while valor_da_aposta < 6 or valor_da_aposta > 20:
-    valor_da_aposta = int(input("Quantidade invalida, digite a quantidade de apostas entre 6 e 20: "))
+sorteio = []
+while (len(sorteio) < 6):
+    sorteado = randint(1, 60)
+    if sorteado not in sorteio:
+        sorteio.append(sorteado)
 
-if valor_da_aposta == 6:
-    print("valor a ser pago é de R$5,00")
-if valor_da_aposta == 7:
-    print("valor a ser pago é de R$35,00")
-if valor_da_aposta == 8:
-    print("valor a ser pago é de R$140,00")
-if valor_da_aposta == 9:
-    print("valor a ser pago é de R$420,00")
-if valor_da_aposta == 10:
-    print("valor a ser pago é de R$1.050,00")
-if valor_da_aposta == 11:
-    print("valor a ser pago é de R$2.310,00")
-if valor_da_aposta == 12:
-    print("valor a ser pago é de R$4.620,00")
-if valor_da_aposta == 13:
-    print("valor a ser pago é de R$8.580,00")
-if valor_da_aposta == 14:
-    print("valor a ser pago é de R$15.015,00")
-if valor_da_aposta == 15:
-    print("valor a ser pago é de R$25.025,00")
-if valor_da_aposta == 16:
-    print("valor a ser pago é de R$40.040,00")
-if valor_da_aposta == 17:
-    print("valor a ser pago é de R$61.880,00")
-if valor_da_aposta == 18:
-    print("valor a ser pago é de R$92.820,00")
-if valor_da_aposta == 19:
-    print("valor a ser pago é de R$135.660,00")
-if valor_da_aposta == 20:
-    print("valor a ser pago é de R$193.800,00")
-pagar = aposta[valor_da_aposta]
-print(f"valor a ser pagpo é R${pago:.2f}")
+print(sorteio)
 
-for i in range(6):
-    numero = randint(1, 60)
-    if numero  in vetor_pc:
-        back = randint(1, 60)
-        if back in vetor_pc:
-            back2 = randint(1, 60)
-            vetor_pc.append(back2)
-         else:
-             vetor_pc.append(numero)
+vetor = [5, 35, 140, 420, 1050, 2310, 4620, 8580, 15015, 25025, 40040, 61880, 92820, 135660, 193800]
+
+num_apostas = int(input("digite a quantidade de apostas: "))
+while num_apostas < 6 or num_apostas > 20:
+    num_apostas = int(input("digite a quantidade de apostas: "))
+print(f"valor da aposta = R$ {vetor(num_apostas - 6):.2f}")
+
+
+aposta = []
+i = 0
+while len(aposta) <= num_apostas:
+    numero = int(input(f"digite um numero {i + 1}: "))
+    while numero < 1 or numero > 60:
+        print("numero invvalido")
+        numero = int(input(f"digite um numero {i + 1}: "))
+    if numero in aposta:
+        print("numero repetido")
     else:
-        vetor_pc.append(numero)
-print(vetor_pc)
+         aposta.append(numero)
+         i += 1
 
-for a in range(aposta):
-    valor_apostado = int(input("Quais numeros desejsa apostar (1 a 60)?: "))
-    while valor_apostado < 1 or valor_apostado > 60:
-        valor_apostaedo = int(input("Numeros invalidos, digite um numero entre 1 e 60: "))
-    valor_da_aposta.append(valor_aposta)
-acertos[]
-numero = 0
-for b in range(60):
-    numero = numero + 1
-    if numero in vetor_pc and numero in valor_apostado:
-print(acertos)
+acertos = 0
+num_acertados = 0
+for i in range(len(sorteio)):
+    if sorteio[i] in aposta:
+        acertos += 1
+        num_acertados.append(sorteio[i])
+
+
+print(f"acertos= {acertos}")
+if acertos == 4:
+    print("acertou a quadra")
+else:
+    if acertos == 5:
+        print("acertou a quina")
+    else:
+        if acertos == 6:
+            print("acertou a sena")
+print(f"numeros acertados = {num_acertados}")
+
