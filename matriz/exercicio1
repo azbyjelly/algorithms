@@ -1,0 +1,10 @@
+def somar_elementos_matriz(matriz):
+    soma = 0
+    for i in range(len(matriz)):
+        for j in range(len(matriz[i])):
+            soma += matriz[i][j]
+    return soma
+
+matriz = [[1,2,3,8,3], [4,5,6,2,1], [0,1,4,6,9]]
+
+print(somar_elementos_matriz(matriz))
