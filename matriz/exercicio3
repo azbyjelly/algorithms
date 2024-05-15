@@ -1,0 +1,25 @@
+def somar_linha(matriz, linha):
+    soma = 0
+    if linha < len(matriz):
+        for j in range(len(matriz[linha])):
+            soma += matriz[linha][j]
+    return soma
+
+def somar_coluna(matriz, coluna):
+    soma = 0
+    if coluna < len(matriz[0]):
+        for i in range(len(matriz)):
+            soma += matriz[i][coluna]
+    return soma
+
+matriz = [
+    [1, 2, 3, 4, 5, 6],
+    [1, 2, 3, 4, 5, 6],
+    [1, 2, 3, 4, 5, 6],
+    [1, 2, 3, 4, 5, 6],
+    [1, 2, 3, 4, 5, 6],
+    [2, 2, 3, 4, 5, 6]
+]
+
+print(somar_linha(matriz, 5))
+print(somar_coluna(matriz, 3))
