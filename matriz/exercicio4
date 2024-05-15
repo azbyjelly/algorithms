@@ -1,0 +1,17 @@
+def menor_diagonal_secundaria(matriz):
+    menor = matriz[0][len(matriz) - 1]
+    for i in range(len(matriz)):
+        if matriz[i][len(matriz) - i - 1] < menor:
+            menor = matriz[i][len(matriz) - i - 1]
+    return menor
+
+matriz = [
+    [1, 2, 3, 4, 5, 6],
+    [1, 2, 3, 4, 5, 6],
+    [1, 2, 3, 4, 5, 6],
+    [1, 2, 3, 4, 5, 6],
+    [1, 2, 3, 4, 5, 6],
+    [2, 2, 3, 4, 5, 6]
+]
+
+print(menor_diagonal_secundaria(matriz))
