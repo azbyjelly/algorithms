@@ -1,0 +1,8 @@
+def numeros_impares(numero):
+    if numero > 30:
+        return
+    if numero % 2 != 0:
+        print(numero)
+    numeros_impares(numero + 1)
+
+numeros_impares(1)
