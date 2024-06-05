@@ -1,0 +1,9 @@
+def menor_valor(vetor, tamanho):
+    if tamanho == 1:
+        return vetor[0]
+    menor = menor_valor(vetor, tamanho - 1)
+    if vetor[tamanho - 1] < menor:
+        return vetor[tamanho - 1]
+    else:
+        return menor
+print(menor_valor([1, 0, 3, 5], 4))
