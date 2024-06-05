@@ -1,0 +1,17 @@
+vetor = [1, 2, 3, 4]
+
+def somar_vetores(contador, soma):
+    if contador < len(vetor):
+        soma += vetor[len(vetor) - 1 - contador]
+        somar_vetores(contador + 1, soma)
+    if contador == len(vetor):
+        print(soma)
+
+somar_vetores(0, 0)
+
+
+
+
+
+
+
