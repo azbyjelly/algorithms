@@ -1,0 +1,19 @@
+def fibonaccinsons(j):
+    if j == 0:
+        return []
+    else:
+        if j == 1:
+            return [0]
+        else:
+            if j == 2:
+                return [0, 1]
+            else:
+                bobo_list = fibonaccinsons(j - 1)
+                primeiro = bobo_list[- 1]
+                segundo = bobo_list[- 2]
+                otru = primeiro + segundo
+                bobo_list.append(otru)
+                return bobo_list
+j = 10
+sequencia = fibonaccinsons(j)
+print(sequencia)
