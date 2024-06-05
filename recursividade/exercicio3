@@ -1,0 +1,6 @@
+def exibir_numeros(a, b):
+    if a > b:
+        return
+    print(a)
+    exibir_numeros(a + 1, b)
+exibir_numeros(1, 30)
