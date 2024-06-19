@@ -1,0 +1,34 @@
+bicho = int(input('tamanho do bicho?'))
+def criar_tabuleiro(dimensao):
+    jogo = []
+    for _ in range(dimensao):
+        linha = []
+        for _ in range(dimensao):
+            linha.append('_')
+        jogo.append(linha)
+    return jogo
+
+def imprimir_tabuleiro(tabuleiro):
+    for linha in tabuleiro:
+        linha_str = ""
+        for elemento in linha:
+            linha_str += " " + elemento + " |"
+        print(linha_str[:-1])
+        print("-" * (4 * len(linha)))
+
+def campo_minado():
+    dimensao = bicho
+    tabuleiro = criar_tabuleiro(dimensao)
+    for i in range(len(tabuleiro)):
+        print(tabuleiro[i])
+
+
+def quantia_minas():
+    numero_minas = int(input('digite o numero de minas'))
+    if numero_minas <= 0:
+        print('NUMERO INVALIDO!!!!!!')
+    if numero_minas > (bicho*bicho) / 2:
+        print('NUMERO INVALIDO!!!!!!')
+    return numero_minas
+quantia_minas()
+campo_minado()
