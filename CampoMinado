@@ -32,3 +32,38 @@ def quantia_minas():
     return numero_minas
 quantia_minas()
 campo_minado()
+
+
+
+
+import random
+
+def criar_tabuleiro(linhas, colunas, bombas):
+    tabuleiro = [[0 for _ in range(colunas)] for _ in range(linhas)]
+    bombas_colocadas = 0
+    while bombas_colocadas < bombas:
+        x = random.randint(0, linhas - 1)
+        y = random.randint(0, colunas - 1)
+        if tabuleiro[x][y] != -1:
+            tabuleiro[x][y] = -1
+            bombas_colocadas += 1
+            for i in range(max(0, x-1), min(linhas, x+2)):
+                for j in range(max(0, y-1), min(colunas, y+2)):
+                    if tabuleiro[i][j] != -1:
+                        tabuleiro[i][j] += 1
+    return tabuleiro
+
+def imprimir_tabuleiro(tabuleiro):
+    for linha in tabuleiro:
+        print(' '.join(str(x) for x in linha))
+
+linhas = 5
+colunas = 5
+bombas = 5
+
+tabuleiro = criar_tabuleiro(linhas, colunas, bombas)
+imprimir_tabuleiro(tabuleiro)
+```
+
+Este algoritmo cria um tabuleiro de Campo Minado com o número especificado de linhas, colunas e bombas, e imprime o tabuleiro resultante. Espero que isso ajude! Se precisar de mais alguma coisa, é só pedir.
+
