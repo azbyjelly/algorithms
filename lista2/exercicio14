@@ -1,0 +1,24 @@
+nota1 = float(input("Digite a nota 1: "))
+if nota1 < 0 or nota1 > 10:
+    print("Nota 1 invalida")
+else:
+    nota2 = float(input("Digite a nota 2: "))
+    if nota2 < 0 or nota2 > 10:
+        print("Nota 2 invalida")
+    else:
+        trabalho = float(input("Digite a nota do trabalho: "))
+        if trabalho < 0 or trabalho > 10:
+            print("Nota do trabalho invalida")
+        else:
+            faltas = float(input("Digite a quantidade de faltas: "))
+            if faltas < 0:
+                print("Numero de faltas invalido")
+            else:
+                if faltas > 15:
+                    print("Reprovado por infrequencia")
+                else:
+                    media = ((nota1 * 3) + (nota2 * 5) + (trabalho * 2)) / 10
+                    if media >= 6:
+                        print("Aprovado")
+                    else:
+                        print("Prova final")
